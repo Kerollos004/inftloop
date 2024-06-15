@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/log.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+    <!------------------------------------ -->
+    <section class="sec-page-section">
+        <article class="sec-page-text">
+            <h3>#login</h3>
+            <article class="follow">
+                <p>follow us on</p>
+                <span class="line"></span>
+                <ul>
+                    <li> <i class="fa-brands fa-facebook"></i></li>
+                    <li> <i class="fa-brands fa-twitter"></i></li>
+                    <li> <i class="fa-brands fa-instagram"></i> </li>
+                    <li> <i class="fa-brands fa-whatsapp"></i> </li>
+                </ul>
+            </article>
+        </article>
+    </section>
+        <!------------------------------------ -->
+    <article class="log-box" id="log-box">
+        <form  class="sign in" >
+            <h3>sign up</h3>
+            <article class="inputs">
+                <input type="text" placeholder="your name...">
+                <input type="number" placeholder="your phone number...">
+                <input type="text" placeholder="your email...">
+                <input type="password" placeholder="your password...">
+                <a href="#log-box" class="clear">submit</a>
+            </article>
+            <article class="btn">
+                <p>already have an account</p>
+                <a href="#log-box" class=" change" data-sign=".up"  >login</a>
+            </article>
+        </form>
+        <form  class="login active up">
+            <h3>login</h3>
+            <article class="inputs">
+                <input type="text" placeholder="your email...">
+                <input type="password" placeholder="your password...">
+                <a href="#log-box" class="clear">submit</a>
+            </article>
+            <article class="btn">
+                <p>don,t have an account</p>
+                <a href="#log-box" class=" change" data-sign=".in" >sign up</a>
+            </article>
+        </form>
+    </article>
+    <article class="link">
+        <a href="index.html" class="back">back to home</a>
+    </article>
+    <!--------------------- pop up---------------------------------->
+    <article class="alert" >
+        <h3></h3>
+        <a href="#contact">ok</a>
+    </article>
+<!--------------------- pop up---------------------------------->
+
+    <script src="js/log.js"></script>
+</html>

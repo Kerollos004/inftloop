@@ -1,0 +1,98 @@
+.services{
+    padding: 3% 5%; 
+}
+.services-wrraper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(280px , 1fr));
+    gap: 25px;
+}
+.services-box{
+    border: 2px solid var(--fst-color);
+    border-radius:var(--medium-radius);
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+}
+.services-box img{
+    margin-bottom: 15px;
+}
+.services-box h3{
+    margin-bottom: 15px;
+    color: var(--fst-color);
+    font-size: var(--h3-fsize);
+}
+.services-box ul{
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+.services-box ul li p{
+    color: var(--txt-color);
+}
+.services-box a{
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 10px;
+    background-color: var(--btn-bg);
+    border-radius: var(--medium-radius);
+    color: white;
+}
+.services-box a:hover{
+    background-color: var( --btn-hover);
+    box-shadow: 0 0 10px var( --btn-hover) ;
+}
+.services-wrraper .services-box:nth-child(2){
+    transform: translateY(-15px);
+}
+@media(max-width:768px){
+    .services-wrraper .services-box:nth-child(2){
+        transform: translateY(0px);
+    }
+}
+/*--------------------- services -------------------------------*/
+.faq{
+    padding: 0 5%;
+}
+.faq-boxs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3%;
+    flex-direction: column;
+}
+.faq-box{
+    border-radius: var(--medium-radius);
+    overflow: hidden;
+    user-select: none;
+}
+.faq-box .main{
+    padding:  20px;
+    background-color:var(--foth-color);
+    color:white ;
+    border-bottom:3px solid white ;
+    display: flex;
+    align-items: center;
+}
+.main h3{
+    font-size: var(--a-fsize);
+}
+.faq-box .answer{
+    background-color: var(--tog-color);
+    color: white;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.answer p{
+    padding: 0 30px;
+}
+.faq-box .answer.active{
+    height:120px ;
+}
+@media(max-width:500px){
+    .answer.answer.active{
+        height: 200px;
+    }
+}
+

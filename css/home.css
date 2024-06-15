@@ -1,0 +1,478 @@
+.media{
+    width: 100%;
+    height: 40px;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background-color: var(--fst-color);
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+}
+.media ul{
+    gap: 30px;
+}
+.media ul li i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--p-fsize);
+}
+.none{
+    display: none;
+}
+/*-----------------end media --------------------*/
+header{
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 8;
+    top: 40px;
+    left: 0;
+    color: white;
+}
+header .logo{
+    font-size: var(--h1-fsize);
+    color: white;
+}
+header nav ul{
+    gap: 0;
+}
+header nav ul li{
+    position: relative;
+}
+header nav ul li a{
+    color: white;
+    padding: 15px 30px ;
+    text-transform: capitalize;
+}
+.other-links{
+    width: 200px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--foth-color);
+    opacity: 0;
+    transform: translateY(40px);
+    pointer-events: none;
+}
+.other-links ul{
+    flex-direction: column;
+}
+#other:hover .other-links{
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+}
+header nav ul li a:hover , header nav ul li a.active{
+    background-color: var(--btn-hover);
+    color: white;
+}
+.more{
+    display: flex;
+    gap:10px ;
+    align-items: center;
+}
+.logorsign{
+    padding: 10px 35px;
+    border: 1px solid white;
+    color: white;
+    border-radius: var(--medium-radius);
+}
+.logorsign:hover{
+    background-color: var(--btn-hover);
+    border-color:transparent ;
+}
+.menu-btn{
+    width: 50px;
+    height: 50px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 5px;
+    cursor: pointer;
+}
+.menu-btn div{
+    width: 100%;
+    height: 3px;
+    border-radius: var(--medium-radius);
+    background-color: var(--fst-color);
+    margin: 5px 0;
+}
+.menu-btn div:first-child{
+    width: 50%;
+}
+header.active{
+    top: 0;
+    background-color: #fff;
+}
+header.active .logo{
+    color: var(--fst-color);
+}
+header.active ul li a{
+    color: var(--fst-color);
+}
+header.active ul li a:hover{
+    color: white;
+    background-color: var(--btn-hover);
+}
+header.active .logorsign{
+    border: 1px solid var(--fst-color);
+    color: var(--fst-color);
+}
+header.active .logorsign:hover{
+    color: white;
+}
+@media(max-width:768px){
+    header {
+        padding: 0 20px;
+        top: 0;
+    }
+    .media{
+        display: none;
+    }
+    .logorsign{
+        padding: 10px 15px;
+    }
+}
+@media(max-width:1100px){
+    .menu-btn{
+        display: flex;
+    }
+    nav ul.menu{
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+        width: 90%;
+        background: var(--foth-color);
+        top: 93px;
+        align-items: end;
+        padding: 0 15px;
+        height: 0;
+        justify-content: center;
+        overflow: hidden;
+    }
+    header.active .menu ul li a{
+        color: white;
+    }
+    .other-links{
+        left: -120%;
+        top: 0;
+        background-color: var(--tog-color);
+        width: 120%;
+    }
+}
+.menu.active{
+    height: 350px;
+}
+/*------------------------- end header ------------------------------*/
+.home{
+    height: 100vh;
+    background-image: url(../img/infinite-loop-01.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-attachment: fixed;
+}
+.home-text{
+    width: 700px;
+}
+.home-text h3 , .home-text p{
+    color: white;
+    margin-bottom: 15px;
+}
+.home-text h3{
+    font-size: var(--h1-fsize);
+}
+.home-text p{
+    text-align: left;
+    margin-bottom: 20px;
+}
+.home-text a{
+    padding: 15px 25px;
+    color: white;
+    border: 1px solid white;
+}
+.home-text a:hover{
+    background-color: var(--btn-hover);
+    border-color: transparent;
+}
+@media(max-width:768px){
+    .home{
+        background-image: url(../img/infinite-loop-02-mobile.jpg);
+    }
+    .home-text{
+        width: 90%;
+    }
+}
+/*---------------------- end home --------------------------*/
+.about{
+    padding: 3%;
+}
+.service-boxs{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px;
+}
+.service-box{
+    padding: 15px;
+}
+.service-text h3{
+    font-size: var(--h3-fsize);
+    color: var(--fst-color);
+    margin-bottom: 20px;
+}
+.service-text p {
+    margin-bottom: 15px;
+}
+.service-text a{
+    color: white;
+    background-color: var(--btn-bg);
+    padding: 10px 25px;
+}
+.service-text a:hover{
+    background-color: var(--btn-hover);
+    box-shadow: 0 0 15px var(--btn-hover);
+}
+@media(max-width:768px){
+    .service-boxs{
+        grid-template-columns: 1fr;
+    }
+    .service-box{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/*----------------------- end services ------------------------------*/
+.more-data{
+    width: 100%;
+    min-height: 50vh;
+    background-image: url(../img/infinite-loop-02-mobile.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 40px;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+}
+.more-data-text{
+    width: 80%;
+    color: white;
+    padding: 15px;  
+}
+.more-data-text h3{
+    font-size: var(--h3-fsize);
+    color: var(--scd-color);
+    margin-bottom: 15px;
+}
+.more-data-text ol{
+    margin-left: 15px;
+    list-style: lower-roman;
+}
+
+.more-data-text ol p{
+    margin-bottom: 15px;
+}
+.more-data-text a{
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: white;
+    border: 1px solid white;
+}
+.more-data-text a:hover{
+    border-color:transparent ;
+    background-color: var(--scd-color);
+    box-shadow: 0 0 15px var(--scd-color);
+}
+@media(max-width:768px){
+    .more-data{
+        padding: 20px 0;
+    }
+    .more-data-text{
+        width: 90%;
+        justify-content: center;
+    }
+}
+
+.connect .title{
+    text-align: center;
+}
+.connect .title h3{
+    color: var(--txt-color);
+}
+.connect-box{
+    padding: 5%;
+    display: grid;
+    grid-template-columns:30% 70%;
+    gap: 25px;
+}
+.connect-text{
+    padding: 15px;
+    border-radius: var(--medium-radius);
+    color:white ;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--fst-color);
+    height: fit-content;
+}
+.connect-text h3{
+    text-align: center;
+    font-size: var(--h3-fsize);
+}
+.connect-text div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.connect-text div a{
+    color: white;
+}
+.connect-text div a:hover{
+    color: var(--foth-color);
+}
+.connect-text div img{
+    width: 60px ;
+    aspect-ratio: 1/1;
+    border-radius: var(--big-radius);
+}
+.connect-box form{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,fr);
+    gap: 20px;
+    background-color: var(--foth-color);
+    border-radius: var(--medium-radius);
+}
+.connect-box form input ,.connect-box form textarea  {
+    grid-column: span 2;
+    padding: 10px 15px; 
+    background-color: white;
+    border: 4px solid white;
+    color: white;
+    font-size: var(--p-fsize);
+    border-radius: var(--small-radius);
+    background-color: transparent;
+}
+.connect-box form input.error ,.connect-box form textarea.error{
+    border-color: red;
+}
+.connect-box form input:focus , .connect-box form textarea:focus{
+    border-radius: var(--medium-radius);
+    border-color: var(--fst-color);
+}
+.connect-box form input::placeholder , .connect-box form textarea::placeholder {
+    color: white;
+}
+.connect-box form textarea , .connect-box form a{
+    grid-column: span 4;
+}
+.connect-box form a{
+    text-align: center;
+    padding: 10px 0;
+    color: var(--btn-color);
+    background-color: white;
+}
+.connect-box form a:hover{
+    background-color: var(--btn-hover);
+    color: white;
+    border-radius: var(--medium-radius);
+}
+
+@media(max-width:1100px){
+    .connect-box{
+        grid-template-columns: 1fr;
+    }
+    .connect-box form input{
+        grid-column: span 4;
+    }
+}
+/*----------------------- end connect ------------------------*/
+footer{
+    width: 100%;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(290px , 1fr));
+    position: relative;
+    background-image: url(../otherimgs/service-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    gap: 35px;
+    border-bottom: 5px solid white;
+}
+footer article h1{
+    font-size: var(--h1-fsize);
+    color: var(--foth-color);
+}
+footer article h3{
+    color: var(--foth-color);
+    font-size: var(--h3-fsize);
+}
+footer article ul{
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+}
+footer article ul a{
+    color: white;
+}
+footer article ul a:hover{
+    color: var(--foth-color);
+    transform: translateX(10px);
+}
+.join{
+    padding: 20px;
+    border-radius: var(--medium-radius);
+    background-color: white;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.join h3{
+    color: var(--foth-color);
+}
+.join a{
+    padding: 10px; 
+    background-color: var(--btn-bg);
+    color: white;
+    text-align: center;
+}
+.join a:hover{
+    border-radius: var(--medium-radius);
+    background-color: var(--foth-color);
+}
+@media(max-width:768px){
+    footer article{
+        text-align: center;
+    }
+}
+/*---------------------- end footer  ---------------------------------*/
+.end{
+    width: 100%;
+    text-align: center;
+    line-height: 1.4;
+    padding: 5%;
+    background-image: url(../otherimgs/service-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    word-spacing: 3px;
+}
+.end a{
+    color: var(--foth-color);
+}
